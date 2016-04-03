@@ -42,7 +42,7 @@ import com.nimbledroid.demo.roboguice.test.Test6;
 import com.nimbledroid.demo.roboguice.test.Test7;
 import com.nimbledroid.demo.roboguice.test.Test8;
 import com.nimbledroid.demo.roboguice.test.Test9;
-import com.google.inject.Inject;
+import javax.inject.Inject;
 import com.google.inject.Singleton;
 
 @Singleton

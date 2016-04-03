@@ -1,17 +1,69 @@
 package com.nimbledroid.demo.roboguice;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-
 import com.demo.roboguice.R;
-import com.nimbledroid.demo.roboguice.manager.*;
-import com.nimbledroid.demo.roboguice.test.*;
+import javax.inject.Inject;
+import com.nimbledroid.demo.roboguice.manager.TestManager;
+import com.nimbledroid.demo.roboguice.manager.TestManager10;
+import com.nimbledroid.demo.roboguice.manager.TestManager11;
+import com.nimbledroid.demo.roboguice.manager.TestManager12;
+import com.nimbledroid.demo.roboguice.manager.TestManager13;
+import com.nimbledroid.demo.roboguice.manager.TestManager14;
+import com.nimbledroid.demo.roboguice.manager.TestManager15;
+import com.nimbledroid.demo.roboguice.manager.TestManager2;
+import com.nimbledroid.demo.roboguice.manager.TestManager3;
+import com.nimbledroid.demo.roboguice.manager.TestManager4;
+import com.nimbledroid.demo.roboguice.manager.TestManager5;
+import com.nimbledroid.demo.roboguice.manager.TestManager6;
+import com.nimbledroid.demo.roboguice.manager.TestManager7;
+import com.nimbledroid.demo.roboguice.manager.TestManager8;
+import com.nimbledroid.demo.roboguice.manager.TestManager9;
+import com.nimbledroid.demo.roboguice.test.Test1;
+import com.nimbledroid.demo.roboguice.test.Test10;
+import com.nimbledroid.demo.roboguice.test.Test11;
+import com.nimbledroid.demo.roboguice.test.Test12;
+import com.nimbledroid.demo.roboguice.test.Test13;
+import com.nimbledroid.demo.roboguice.test.Test14;
+import com.nimbledroid.demo.roboguice.test.Test15;
+import com.nimbledroid.demo.roboguice.test.Test16;
+import com.nimbledroid.demo.roboguice.test.Test17;
+import com.nimbledroid.demo.roboguice.test.Test18;
+import com.nimbledroid.demo.roboguice.test.Test19;
+import com.nimbledroid.demo.roboguice.test.Test2;
+import com.nimbledroid.demo.roboguice.test.Test20;
+import com.nimbledroid.demo.roboguice.test.Test21;
+import com.nimbledroid.demo.roboguice.test.Test22;
+import com.nimbledroid.demo.roboguice.test.Test23;
+import com.nimbledroid.demo.roboguice.test.Test24;
+import com.nimbledroid.demo.roboguice.test.Test25;
+import com.nimbledroid.demo.roboguice.test.Test26;
+import com.nimbledroid.demo.roboguice.test.Test27;
+import com.nimbledroid.demo.roboguice.test.Test28;
+import com.nimbledroid.demo.roboguice.test.Test29;
+import com.nimbledroid.demo.roboguice.test.Test3;
+import com.nimbledroid.demo.roboguice.test.Test30;
+import com.nimbledroid.demo.roboguice.test.Test31;
+import com.nimbledroid.demo.roboguice.test.Test32;
+import com.nimbledroid.demo.roboguice.test.Test33;
+import com.nimbledroid.demo.roboguice.test.Test34;
+import com.nimbledroid.demo.roboguice.test.Test35;
+import com.nimbledroid.demo.roboguice.test.Test36;
+import com.nimbledroid.demo.roboguice.test.Test37;
+import com.nimbledroid.demo.roboguice.test.Test38;
+import com.nimbledroid.demo.roboguice.test.Test39;
+import com.nimbledroid.demo.roboguice.test.Test4;
+import com.nimbledroid.demo.roboguice.test.Test40;
+import com.nimbledroid.demo.roboguice.test.Test5;
+import com.nimbledroid.demo.roboguice.test.Test6;
+import com.nimbledroid.demo.roboguice.test.Test7;
+import com.nimbledroid.demo.roboguice.test.Test8;
+import com.nimbledroid.demo.roboguice.test.Test9;
+import roboguice.RoboGuice;
+import roboguice.inject.ContextScopedRoboInjector;
 
-import com.google.inject.Inject;
-
-import roboguice.activity.RoboActivity;
-
-public class MainActivity extends RoboActivity {
+public class MainActivity extends Activity {
 
     @Inject Test1 mTest1;
     @Inject Test2 mTest2;
@@ -73,6 +125,17 @@ public class MainActivity extends RoboActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        long start = System.currentTimeMillis();
+        RoboGuice.setupBaseApplicationInjector(getApplication());
+        long end = System.currentTimeMillis();
+        System.out.println("Time to setup application injector " + (end-start));
+        final ContextScopedRoboInjector injector = RoboGuice.getInjector(this);
+        long end2 = System.currentTimeMillis();
+        System.out.println("Time to setup activity injector " + (end2-end));
+        injector.injectMembers(this);
+        long end3 = System.currentTimeMillis();
+        System.out.println("Time to inject members" + (end3-end2));
+
         setContentView(R.layout.activity_main);
 
         Log.d(MainActivity.class.getSimpleName(), "onCreate(): " + mTest1.toString());
@@ -132,5 +195,4 @@ public class MainActivity extends RoboActivity {
         mTestManager14.start();
         mTestManager15.start();
     }
-
 }

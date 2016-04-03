@@ -15,6 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <meta-data android:name="roboguice.annotations.packages" android:value="com.demo.roboguice"/>
     </application>
 
 </manifest>
