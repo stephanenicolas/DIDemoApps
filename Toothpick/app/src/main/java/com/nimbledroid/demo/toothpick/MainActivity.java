@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import com.demo.toothpick.R;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 import javax.inject.Inject;
 import com.nimbledroid.demo.toothpick.manager.TestManager;
 import com.nimbledroid.demo.toothpick.manager.TestManager10;
@@ -108,21 +110,21 @@ public class MainActivity extends Activity {
     @Inject Test39 mTest39;
     @Inject Test40 mTest40;
 
-    @Inject TestManager mTestManager;
-    @Inject TestManager2 mTestManager2;
-    @Inject TestManager3 mTestManager3;
-    @Inject TestManager4 mTestManager4;
-    @Inject TestManager5 mTestManager5;
-    @Inject TestManager6 mTestManager6;
-    @Inject TestManager7 mTestManager7;
-    @Inject TestManager8 mTestManager8;
-    @Inject TestManager9 mTestManager9;
-    @Inject TestManager10 mTestManager10;
-    @Inject TestManager11 mTestManager11;
-    @Inject TestManager12 mTestManager12;
-    @Inject TestManager13 mTestManager13;
-    @Inject TestManager14 mTestManager14;
-    @Inject TestManager15 mTestManager15;
+    @Inject Future<TestManager> mTestManager;
+    @Inject Future<TestManager2> mTestManager2;
+    @Inject Future<TestManager3> mTestManager3;
+    @Inject Future<TestManager4> mTestManager4;
+    @Inject Future<TestManager5> mTestManager5;
+    @Inject Future<TestManager6> mTestManager6;
+    @Inject Future<TestManager7> mTestManager7;
+    @Inject Future<TestManager8> mTestManager8;
+    @Inject Future<TestManager9> mTestManager9;
+    @Inject Future<TestManager10> mTestManager10;
+    @Inject Future<TestManager11> mTestManager11;
+    @Inject Future<TestManager12> mTestManager12;
+    @Inject Future<TestManager13> mTestManager13;
+    @Inject Future<TestManager14> mTestManager14;
+    @Inject Future<TestManager15> mTestManager15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,7 +137,7 @@ public class MainActivity extends Activity {
         System.out.println("Time to setup activity injector " + (end-start));
         injector.inject(this);
         long end2 = System.currentTimeMillis();
-        System.out.println("Time to inject members" + (end2-end));
+        System.out.println("Time to inject members" + (end2 - end));
 
         setContentView(R.layout.activity_main);
 
@@ -180,20 +182,26 @@ public class MainActivity extends Activity {
         Log.d(MainActivity.class.getSimpleName(), "onCreate(): " + mTest39.toString());
         Log.d(MainActivity.class.getSimpleName(), "onCreate(): " + mTest40.toString());
 
-        mTestManager.start();
-        mTestManager2.start();
-        mTestManager3.start();
-        mTestManager4.start();
-        mTestManager5.start();
-        mTestManager6.start();
-        mTestManager7.start();
-        mTestManager8.start();
-        mTestManager9.start();
-        mTestManager10.start();
-        mTestManager11.start();
-        mTestManager12.start();
-        mTestManager13.start();
-        mTestManager14.start();
-        mTestManager15.start();
+        try {
+            mTestManager.get().start();
+            mTestManager2.get().start();
+            mTestManager3.get().start();
+            mTestManager4.get().start();
+            mTestManager5.get().start();
+            mTestManager6.get().start();
+            mTestManager7.get().start();
+            mTestManager8.get().start();
+            mTestManager9.get().start();
+            mTestManager10.get().start();
+            mTestManager11.get().start();
+            mTestManager12.get().start();
+            mTestManager13.get().start();
+            mTestManager14.get().start();
+            mTestManager15.get().start();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 }
