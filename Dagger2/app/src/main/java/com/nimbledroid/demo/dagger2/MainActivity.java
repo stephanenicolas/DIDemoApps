@@ -127,8 +127,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        long start = System.currentTimeMillis();
         D2EComponent component = DaggerD2EComponent.builder().dagger2Module(new Dagger2Module()).build();
+        long end = System.currentTimeMillis();
+        System.out.println("Time to setup activity injector " + (end-start));
         component.inject(this);
         component.inject(mTest1);
         component.inject(mTest2);
@@ -170,6 +172,8 @@ public class MainActivity extends AppCompatActivity {
         component.inject(mTest38);
         component.inject(mTest39);
         component.inject(mTest40);
+        long end2 = System.currentTimeMillis();
+        System.out.println("Time to inject members" + (end2 - end));
 
         Log.d(MainActivity.class.getSimpleName(), "onCreate(): " + mTest1.toString());
         Log.d(MainActivity.class.getSimpleName(), "onCreate(): " + mTest2.toString());
