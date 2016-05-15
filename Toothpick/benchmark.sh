@@ -1,0 +1,1 @@
+adb logcat -c && adb logcat  | grep --line-buffered -Eio "members\d+" | xargs -I {} sh -c 'echo {}; app="com.nimbledroid.demo.toothpick"; adb shell am force-stop $app; adb shell am start -a android.intent.action.MAIN -n $app/.MainActivity;' | grep -Eo "\d+$"

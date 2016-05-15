@@ -232,27 +232,6 @@ public class Test3 {
     @Inject public E19 e19;
     @Inject public E20 e20;
 
-    @Inject public F1 f1;
-    @Inject public F2 f2;
-    @Inject public F3 f3;
-    @Inject public F4 f4;
-    @Inject public F5 f5;
-    @Inject public F6 f6;
-    @Inject public F7 f7;
-    @Inject public F8 f8;
-    @Inject public F9 f9;
-    @Inject public F10 f10;
-    @Inject public F11 f11;
-    @Inject public F12 f12;
-    @Inject public F13 f13;
-    @Inject public F14 f14;
-    @Inject public F15 f15;
-    @Inject public F16 f16;
-    @Inject public F17 f17;
-    @Inject public F18 f18;
-    @Inject public F19 f19;
-    @Inject public F20 f20;
-
     private String stringField1;
     private String stringField2;
     private String stringField3;
@@ -1418,26 +1397,6 @@ public class Test3 {
                 ", e18=" + e18 +
                 ", e19=" + e19 +
                 ", e20=" + e20 +
-                ", f1=" + f1 +
-                ", f2=" + f2 +
-                ", f3=" + f3 +
-                ", f4=" + f4 +
-                ", f5=" + f5 +
-                ", f6=" + f6 +
-                ", f7=" + f7 +
-                ", f8=" + f8 +
-                ", f9=" + f9 +
-                ", f10=" + f10 +
-                ", f11=" + f11 +
-                ", f12=" + f12 +
-                ", f13=" + f13 +
-                ", f14=" + f14 +
-                ", f15=" + f15 +
-                ", f16=" + f16 +
-                ", f17=" + f17 +
-                ", f18=" + f18 +
-                ", f19=" + f19 +
-                ", f20=" + f20 +
                 ", stringField1='" + stringField1 + '\'' +
                 ", stringField2='" + stringField2 + '\'' +
                 ", stringField3='" + stringField3 + '\'' +

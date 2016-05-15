@@ -1,7 +1,7 @@
 package com.nimbledroid.demo.dagger2.test;
 
-import com.nimbledroid.demo.dagger2.Generator;
 
+import com.nimbledroid.demo.dagger2.Generator;
 import javax.inject.Inject;
 
 import model.a.A1;
@@ -126,7 +126,6 @@ import model.f.F8;
 import model.f.F9;
 
 public class Test1 {
-
     @Inject public A1 a1;
     @Inject public A2 a2;
     @Inject public A3 a3;
@@ -232,27 +231,6 @@ public class Test1 {
     @Inject public E19 e19;
     @Inject public E20 e20;
 
-    @Inject public F1 f1;
-    @Inject public F2 f2;
-    @Inject public F3 f3;
-    @Inject public F4 f4;
-    @Inject public F5 f5;
-    @Inject public F6 f6;
-    @Inject public F7 f7;
-    @Inject public F8 f8;
-    @Inject public F9 f9;
-    @Inject public F10 f10;
-    @Inject public F11 f11;
-    @Inject public F12 f12;
-    @Inject public F13 f13;
-    @Inject public F14 f14;
-    @Inject public F15 f15;
-    @Inject public F16 f16;
-    @Inject public F17 f17;
-    @Inject public F18 f18;
-    @Inject public F19 f19;
-    @Inject public F20 f20;
-
     private String stringField1;
     private String stringField2;
     private String stringField3;
@@ -334,7 +312,7 @@ public class Test1 {
     private Object objectField19;
     private Object objectField20;
 
-    public Test1() {
+    @Inject public Test1() {
         stringField1 = Generator.string();
         stringField2 = Generator.string();
         stringField3 = Generator.string();
@@ -1318,206 +1296,186 @@ public class Test1 {
     @Override
     public String toString() {
         return "Test1{" +
-                "a1=" + a1 +
-                ", a2=" + a2 +
-                ", a3=" + a3 +
-                ", a4=" + a4 +
-                ", a5=" + a5 +
-                ", a6=" + a6 +
-                ", a7=" + a7 +
-                ", a8=" + a8 +
-                ", a9=" + a9 +
-                ", a10=" + a10 +
-                ", a11=" + a11 +
-                ", a12=" + a12 +
-                ", a13=" + a13 +
-                ", a14=" + a14 +
-                ", a15=" + a15 +
-                ", a16=" + a16 +
-                ", a17=" + a17 +
-                ", a18=" + a18 +
-                ", a19=" + a19 +
-                ", a20=" + a20 +
-                ", b1=" + b1 +
-                ", b2=" + b2 +
-                ", b3=" + b3 +
-                ", b4=" + b4 +
-                ", b5=" + b5 +
-                ", b6=" + b6 +
-                ", b7=" + b7 +
-                ", b8=" + b8 +
-                ", b9=" + b9 +
-                ", b10=" + b10 +
-                ", b11=" + b11 +
-                ", b12=" + b12 +
-                ", b13=" + b13 +
-                ", b14=" + b14 +
-                ", b15=" + b15 +
-                ", b16=" + b16 +
-                ", b17=" + b17 +
-                ", b18=" + b18 +
-                ", b19=" + b19 +
-                ", b20=" + b20 +
-                ", c1=" + c1 +
-                ", c2=" + c2 +
-                ", c3=" + c3 +
-                ", c4=" + c4 +
-                ", c5=" + c5 +
-                ", c6=" + c6 +
-                ", c7=" + c7 +
-                ", c8=" + c8 +
-                ", c9=" + c9 +
-                ", c10=" + c10 +
-                ", c11=" + c11 +
-                ", c12=" + c12 +
-                ", c13=" + c13 +
-                ", c14=" + c14 +
-                ", c15=" + c15 +
-                ", c16=" + c16 +
-                ", c17=" + c17 +
-                ", c18=" + c18 +
-                ", c19=" + c19 +
-                ", c20=" + c20 +
-                ", d1=" + d1 +
-                ", d2=" + d2 +
-                ", d3=" + d3 +
-                ", d4=" + d4 +
-                ", d5=" + d5 +
-                ", d6=" + d6 +
-                ", d7=" + d7 +
-                ", d8=" + d8 +
-                ", d9=" + d9 +
-                ", d10=" + d10 +
-                ", d11=" + d11 +
-                ", d12=" + d12 +
-                ", d13=" + d13 +
-                ", d14=" + d14 +
-                ", d15=" + d15 +
-                ", d16=" + d16 +
-                ", d17=" + d17 +
-                ", d18=" + d18 +
-                ", d19=" + d19 +
-                ", d20=" + d20 +
-                ", e1=" + e1 +
-                ", e2=" + e2 +
-                ", e3=" + e3 +
-                ", e4=" + e4 +
-                ", e5=" + e5 +
-                ", e6=" + e6 +
-                ", e7=" + e7 +
-                ", e8=" + e8 +
-                ", e9=" + e9 +
-                ", e10=" + e10 +
-                ", e11=" + e11 +
-                ", e12=" + e12 +
-                ", e13=" + e13 +
-                ", e14=" + e14 +
-                ", e15=" + e15 +
-                ", e16=" + e16 +
-                ", e17=" + e17 +
-                ", e18=" + e18 +
-                ", e19=" + e19 +
-                ", e20=" + e20 +
-                ", f1=" + f1 +
-                ", f2=" + f2 +
-                ", f3=" + f3 +
-                ", f4=" + f4 +
-                ", f5=" + f5 +
-                ", f6=" + f6 +
-                ", f7=" + f7 +
-                ", f8=" + f8 +
-                ", f9=" + f9 +
-                ", f10=" + f10 +
-                ", f11=" + f11 +
-                ", f12=" + f12 +
-                ", f13=" + f13 +
-                ", f14=" + f14 +
-                ", f15=" + f15 +
-                ", f16=" + f16 +
-                ", f17=" + f17 +
-                ", f18=" + f18 +
-                ", f19=" + f19 +
-                ", f20=" + f20 +
-                ", stringField1='" + stringField1 + '\'' +
-                ", stringField2='" + stringField2 + '\'' +
-                ", stringField3='" + stringField3 + '\'' +
-                ", stringField4='" + stringField4 + '\'' +
-                ", stringField5='" + stringField5 + '\'' +
-                ", stringField6='" + stringField6 + '\'' +
-                ", stringField7='" + stringField7 + '\'' +
-                ", stringField8='" + stringField8 + '\'' +
-                ", stringField9='" + stringField9 + '\'' +
-                ", stringField10='" + stringField10 + '\'' +
-                ", stringField11='" + stringField11 + '\'' +
-                ", stringField12='" + stringField12 + '\'' +
-                ", stringField13='" + stringField13 + '\'' +
-                ", stringField14='" + stringField14 + '\'' +
-                ", stringField15='" + stringField15 + '\'' +
-                ", stringField16='" + stringField16 + '\'' +
-                ", stringField17='" + stringField17 + '\'' +
-                ", stringField18='" + stringField18 + '\'' +
-                ", stringField19='" + stringField19 + '\'' +
-                ", stringField20='" + stringField20 + '\'' +
-                ", integerField1=" + integerField1 +
-                ", integerField2=" + integerField2 +
-                ", integerField3=" + integerField3 +
-                ", integerField4=" + integerField4 +
-                ", integerField5=" + integerField5 +
-                ", integerField6=" + integerField6 +
-                ", integerField7=" + integerField7 +
-                ", integerField8=" + integerField8 +
-                ", integerField9=" + integerField9 +
-                ", integerField10=" + integerField10 +
-                ", integerField11=" + integerField11 +
-                ", integerField12=" + integerField12 +
-                ", integerField13=" + integerField13 +
-                ", integerField14=" + integerField14 +
-                ", integerField15=" + integerField15 +
-                ", integerField16=" + integerField16 +
-                ", integerField17=" + integerField17 +
-                ", integerField18=" + integerField18 +
-                ", integerField19=" + integerField19 +
-                ", integerField20=" + integerField20 +
-                ", doubleField1=" + doubleField1 +
-                ", doubleField2=" + doubleField2 +
-                ", doubleField3=" + doubleField3 +
-                ", doubleField4=" + doubleField4 +
-                ", doubleField5=" + doubleField5 +
-                ", doubleField6=" + doubleField6 +
-                ", doubleField7=" + doubleField7 +
-                ", doubleField8=" + doubleField8 +
-                ", doubleField9=" + doubleField9 +
-                ", doubleField10=" + doubleField10 +
-                ", doubleField11=" + doubleField11 +
-                ", doubleField12=" + doubleField12 +
-                ", doubleField13=" + doubleField13 +
-                ", doubleField14=" + doubleField14 +
-                ", doubleField15=" + doubleField15 +
-                ", doubleField16=" + doubleField16 +
-                ", doubleField17=" + doubleField17 +
-                ", doubleField18=" + doubleField18 +
-                ", doubleField19=" + doubleField19 +
-                ", doubleField20=" + doubleField20 +
-                ", objectField1=" + objectField1 +
-                ", objectField2=" + objectField2 +
-                ", objectField3=" + objectField3 +
-                ", objectField4=" + objectField4 +
-                ", objectField5=" + objectField5 +
-                ", objectField6=" + objectField6 +
-                ", objectField7=" + objectField7 +
-                ", objectField8=" + objectField8 +
-                ", objectField9=" + objectField9 +
-                ", objectField10=" + objectField10 +
-                ", objectField11=" + objectField11 +
-                ", objectField12=" + objectField12 +
-                ", objectField13=" + objectField13 +
-                ", objectField14=" + objectField14 +
-                ", objectField15=" + objectField15 +
-                ", objectField16=" + objectField16 +
-                ", objectField17=" + objectField17 +
-                ", objectField18=" + objectField18 +
-                ", objectField19=" + objectField19 +
-                ", objectField20=" + objectField20 +
-                '}';
+            "a1=" + a1 +
+            ", a2=" + a2 +
+            ", a3=" + a3 +
+            ", a4=" + a4 +
+            ", a5=" + a5 +
+            ", a6=" + a6 +
+            ", a7=" + a7 +
+            ", a8=" + a8 +
+            ", a9=" + a9 +
+            ", a10=" + a10 +
+            ", a11=" + a11 +
+            ", a12=" + a12 +
+            ", a13=" + a13 +
+            ", a14=" + a14 +
+            ", a15=" + a15 +
+            ", a16=" + a16 +
+            ", a17=" + a17 +
+            ", a18=" + a18 +
+            ", a19=" + a19 +
+            ", a20=" + a20 +
+            ", b1=" + b1 +
+            ", b2=" + b2 +
+            ", b3=" + b3 +
+            ", b4=" + b4 +
+            ", b5=" + b5 +
+            ", b6=" + b6 +
+            ", b7=" + b7 +
+            ", b8=" + b8 +
+            ", b9=" + b9 +
+            ", b10=" + b10 +
+            ", b11=" + b11 +
+            ", b12=" + b12 +
+            ", b13=" + b13 +
+            ", b14=" + b14 +
+            ", b15=" + b15 +
+            ", b16=" + b16 +
+            ", b17=" + b17 +
+            ", b18=" + b18 +
+            ", b19=" + b19 +
+            ", b20=" + b20 +
+            ", c1=" + c1 +
+            ", c2=" + c2 +
+            ", c3=" + c3 +
+            ", c4=" + c4 +
+            ", c5=" + c5 +
+            ", c6=" + c6 +
+            ", c7=" + c7 +
+            ", c8=" + c8 +
+            ", c9=" + c9 +
+            ", c10=" + c10 +
+            ", c11=" + c11 +
+            ", c12=" + c12 +
+            ", c13=" + c13 +
+            ", c14=" + c14 +
+            ", c15=" + c15 +
+            ", c16=" + c16 +
+            ", c17=" + c17 +
+            ", c18=" + c18 +
+            ", c19=" + c19 +
+            ", c20=" + c20 +
+            ", d1=" + d1 +
+            ", d2=" + d2 +
+            ", d3=" + d3 +
+            ", d4=" + d4 +
+            ", d5=" + d5 +
+            ", d6=" + d6 +
+            ", d7=" + d7 +
+            ", d8=" + d8 +
+            ", d9=" + d9 +
+            ", d10=" + d10 +
+            ", d11=" + d11 +
+            ", d12=" + d12 +
+            ", d13=" + d13 +
+            ", d14=" + d14 +
+            ", d15=" + d15 +
+            ", d16=" + d16 +
+            ", d17=" + d17 +
+            ", d18=" + d18 +
+            ", d19=" + d19 +
+            ", d20=" + d20 +
+            ", e1=" + e1 +
+            ", e2=" + e2 +
+            ", e3=" + e3 +
+            ", e4=" + e4 +
+            ", e5=" + e5 +
+            ", e6=" + e6 +
+            ", e7=" + e7 +
+            ", e8=" + e8 +
+            ", e9=" + e9 +
+            ", e10=" + e10 +
+            ", e11=" + e11 +
+            ", e12=" + e12 +
+            ", e13=" + e13 +
+            ", e14=" + e14 +
+            ", e15=" + e15 +
+            ", e16=" + e16 +
+            ", e17=" + e17 +
+            ", e18=" + e18 +
+            ", e19=" + e19 +
+            ", e20=" + e20 +
+            ", stringField1='" + stringField1 + '\'' +
+            ", stringField2='" + stringField2 + '\'' +
+            ", stringField3='" + stringField3 + '\'' +
+            ", stringField4='" + stringField4 + '\'' +
+            ", stringField5='" + stringField5 + '\'' +
+            ", stringField6='" + stringField6 + '\'' +
+            ", stringField7='" + stringField7 + '\'' +
+            ", stringField8='" + stringField8 + '\'' +
+            ", stringField9='" + stringField9 + '\'' +
+            ", stringField10='" + stringField10 + '\'' +
+            ", stringField11='" + stringField11 + '\'' +
+            ", stringField12='" + stringField12 + '\'' +
+            ", stringField13='" + stringField13 + '\'' +
+            ", stringField14='" + stringField14 + '\'' +
+            ", stringField15='" + stringField15 + '\'' +
+            ", stringField16='" + stringField16 + '\'' +
+            ", stringField17='" + stringField17 + '\'' +
+            ", stringField18='" + stringField18 + '\'' +
+            ", stringField19='" + stringField19 + '\'' +
+            ", stringField20='" + stringField20 + '\'' +
+            ", integerField1=" + integerField1 +
+            ", integerField2=" + integerField2 +
+            ", integerField3=" + integerField3 +
+            ", integerField4=" + integerField4 +
+            ", integerField5=" + integerField5 +
+            ", integerField6=" + integerField6 +
+            ", integerField7=" + integerField7 +
+            ", integerField8=" + integerField8 +
+            ", integerField9=" + integerField9 +
+            ", integerField10=" + integerField10 +
+            ", integerField11=" + integerField11 +
+            ", integerField12=" + integerField12 +
+            ", integerField13=" + integerField13 +
+            ", integerField14=" + integerField14 +
+            ", integerField15=" + integerField15 +
+            ", integerField16=" + integerField16 +
+            ", integerField17=" + integerField17 +
+            ", integerField18=" + integerField18 +
+            ", integerField19=" + integerField19 +
+            ", integerField20=" + integerField20 +
+            ", doubleField1=" + doubleField1 +
+            ", doubleField2=" + doubleField2 +
+            ", doubleField3=" + doubleField3 +
+            ", doubleField4=" + doubleField4 +
+            ", doubleField5=" + doubleField5 +
+            ", doubleField6=" + doubleField6 +
+            ", doubleField7=" + doubleField7 +
+            ", doubleField8=" + doubleField8 +
+            ", doubleField9=" + doubleField9 +
+            ", doubleField10=" + doubleField10 +
+            ", doubleField11=" + doubleField11 +
+            ", doubleField12=" + doubleField12 +
+            ", doubleField13=" + doubleField13 +
+            ", doubleField14=" + doubleField14 +
+            ", doubleField15=" + doubleField15 +
+            ", doubleField16=" + doubleField16 +
+            ", doubleField17=" + doubleField17 +
+            ", doubleField18=" + doubleField18 +
+            ", doubleField19=" + doubleField19 +
+            ", doubleField20=" + doubleField20 +
+            ", objectField1=" + objectField1 +
+            ", objectField2=" + objectField2 +
+            ", objectField3=" + objectField3 +
+            ", objectField4=" + objectField4 +
+            ", objectField5=" + objectField5 +
+            ", objectField6=" + objectField6 +
+            ", objectField7=" + objectField7 +
+            ", objectField8=" + objectField8 +
+            ", objectField9=" + objectField9 +
+            ", objectField10=" + objectField10 +
+            ", objectField11=" + objectField11 +
+            ", objectField12=" + objectField12 +
+            ", objectField13=" + objectField13 +
+            ", objectField14=" + objectField14 +
+            ", objectField15=" + objectField15 +
+            ", objectField16=" + objectField16 +
+            ", objectField17=" + objectField17 +
+            ", objectField18=" + objectField18 +
+            ", objectField19=" + objectField19 +
+            ", objectField20=" + objectField20 +
+            '}';
     }
 }
